@@ -4,28 +4,23 @@ const RandomImage = () => {
     const [d, setData] = useState([]);
     const fetchData = () => {
         fetch("www.thecocktaildb.com/api/json/v1/1/random.php")
-            .then(response => {
-                console.log('Response:', response);
-                return response.json()
-            })
+            .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setData(data)
+                setData(data);
 
             })
     }
     useEffect(() => {fetchData()}, []);
-
+    console.log(d.strDrinkThumb)
 
     return (
         <div>
-            {d &&
-            d.map(d => (
-                <img
-                    src={d.strDrinkThumb}
-                    alt="toto"
-                />
-            ))}
+
+            <img
+                src={d.strDrinkThumb}
+                alt="Impossible d'afficher l'image, problème de fetch"
+            />
         </div>
 
 
