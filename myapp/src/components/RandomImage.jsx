@@ -23,7 +23,7 @@ const RandomImage = () => {
             d.map(d => (
                 <img
                     src={d.strDrinkThumb}
-                    alt={"image #"}
+                    alt="toto"
                 />
             ))}
         </div>
