@@ -12,7 +12,6 @@ const RandomImage = () => {
             })
     }
     useEffect(() => {fetchData()}, []);
-    console.log(d.strDrinkThumb)
 
     return (
         <div>
